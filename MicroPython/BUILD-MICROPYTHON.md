@@ -10,29 +10,30 @@ sudo apt update
 ```
 sudo apt full-upgrade -y
 ```
-3. Install Tools
+3. Install essential tools
 ```
 sudo apt install git build-essential cmake gcc-arm-none-eabi libnewlib-arm-none-eabi -y
 ```
 4. Download Micropython
 ```
-git clone --recurse-submodules https://github.com/micropython/micropython.git
+git clone -b master https://github.com/micropython/micropython.git
 ```
 5. Go to Micropython Folder
 ```
 cd micropython
 ```
-6. Update `pico-sdk` and `tinyusb`
+6. Fetch submodules
 ```
-git submodule update --init -- lib/pico-sdk lib/tinyusb
+git submodule update --init --recursive
 ```
+- Wait for sometimes to fetch all submodules.
 7. Build `mpy-cross`
 ```
 make -C mpy-cross
 ```
-8. Go to `rp2` Folder
+8. Go to `ports` folder
 ```
-cd ports/rp2
+cd ports
 ```
 9. Build `ports/rp2` for RP2040
 ```
