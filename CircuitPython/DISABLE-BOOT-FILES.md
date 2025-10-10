@@ -2,7 +2,7 @@
 
 # It disables various files which are shown while boot the CircuitPython device.
 
-# Steps to do
+# Steps
 1. Go to `circuitpython/supervisor/shared` folder.
 2. Open `filesystem.c` file.
 3. Find these lines in the file.
