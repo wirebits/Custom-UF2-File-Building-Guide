@@ -13,7 +13,13 @@
 8. Done! Build, flash and it disable most of builtin-Modules in the firmware now!
 - It reduce the size of firmware file.
 
-# List of FROZEN_MPY_DIRS
+# Values
+- `0` means `Disabled`
+- `1` means `Enabled`
+- By default, all modules are disabled.
+- To enable, just change the value from `0` to `1`.
+
+# List of builtin Modules
 ```
 CIRCUITPY_AESIO = 0
 CIRCUITPY_ALARM = 0
